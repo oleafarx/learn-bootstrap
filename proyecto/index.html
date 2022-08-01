@@ -5,13 +5,92 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title></title>
   </head>
   
   <body>
-    
-    
+    <!-- HEADER -->
+    <!--Agrege navbar-dark para que las letras se pusieran grises, sino, no eran legibles-->
+    <!--El navbar-expand es la propieda que indica en que breeakpoint se expandirá el navbar-->
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="assets/pyramid-mexico-svgrepo-com.svg" alt="Logo Blog">
+            <strong>Maya Blog</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--me y ms es Margin End y Margin Start, en este caso usamos ms auto para agregar margen inicial y correrlo a la derecha-->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Colaboradores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sede</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Conviertete en Colaborador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-donacion" href="#">Donaciones</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- /HEADER -->
+
+    <!-- MAIN -->
+    <main>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/images/pexels-olivia-redpath-artesanias.jpg" class="d-block w-100" alt="Chapines">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/images/pexels-clive-kim-volcanFuego.jpg" class="d-block w-100" alt="Volcan de Fuego en Erupción">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/images/pexels-saulo-zayas-antigua.jpg" class="d-block w-100" alt="Antigua Guatemala">
+              </div>
+            </div>
+          </div>
+    </main>
+    <!-- /MAIN -->
+
+    <!-- FOOTER -->
+    <!--pb es padding bottom y pt es padding top-->
+    <!--también se puede usar py que aplica para abajo y arriba-->
+    <footer id="footer" class="pb-4 pt-4">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-md">
+                    <a href="#">Inicio</a>
+                </div>
+                <div class="col-12 col-md">
+                    <a href="#">Blog</a>
+                </div>
+                <div class="col-12 col-md">
+                    <a href="#">Videos</a>
+                </div>
+                <div class="col-12 col-md">
+                    <a href="#">Nosotros</a>
+                </div>
+                <div class="col-12 col-md">
+                    <a href="#">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
   </body>
