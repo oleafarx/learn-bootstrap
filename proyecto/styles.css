@@ -27,6 +27,12 @@ main img{
     font-size: 18px;
 }
 
+@media (max-width: 600px) {
+    main img{
+        object-position: 50% 50%;
+    }
+}
+
 /*PALETA DE COLORES
 354F52
 52796F
