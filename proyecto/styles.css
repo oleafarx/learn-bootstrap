@@ -14,7 +14,34 @@ main img{
     height: 70vh;
     object-fit:cover;
     object-position: 15% 85%;
-    filter: grayscale(60%);
+    filter: grayscale(0.8);
+}
+
+#carousel {
+    position: relative;
+}
+
+#carousel .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.overlay .container,
+.overlay .row {
+    height: 100%;
+}
+
+.btn-donar {
+    background-color: #97c93e !important;
+    color: white;
+}
+.btn-donar:hover {
+    background-color: #52796F !important;
 }
 
 #footer {
