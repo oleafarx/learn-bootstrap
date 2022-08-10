@@ -27,7 +27,7 @@ main img{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
 }
 
@@ -44,6 +44,20 @@ main img{
     background-color: #52796F !important;
 }
 
+.card img {
+    height: 50vh;
+    object-fit:cover;
+}
+
+#place-time {
+    background-color: #212529;
+    color: white;
+}
+
+#place-time img{
+    max-width: 100%;
+}
+
 #footer {
     background: linear-gradient(270deg,#354F52,#52796F);
 }
@@ -52,6 +66,14 @@ main img{
     color: white;
     text-decoration: none;
     font-size: 18px;
+}
+
+#logoFooterContainer {
+    height: 100%;
+}
+
+#logoFooter {
+    height: 80px;
 }
 
 @media (max-width: 600px) {
