@@ -49,12 +49,12 @@ main img{
     object-fit:cover;
 }
 
-#place-time {
+#blog {
     background-color: #212529;
     color: white;
 }
 
-#place-time img{
+#blog img{
     max-width: 100%;
 }
 

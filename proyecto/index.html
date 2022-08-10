@@ -11,36 +11,37 @@
     <title>Maya Blog</title>
   </head>
   
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#navbar">
     <!-- HEADER -->
     <!--Agrege navbar-dark para que las letras se pusieran grises, sino, no eran legibles-->
     <!--El navbar-expand es la propieda que indica en que breeakpoint se expandirá el navbar-->
-    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- fixed-top es para mantener una posición fija arriba, en este caso, nuestro nav -->
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
           <a class="navbar-brand" href="#">
             <img src="assets/pyramid-mexico-svgrepo-com.svg" alt="Logo Blog">
             <strong>Maya Blog</strong>
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbar">
             <!--me y ms es Margin End y Margin Start, en este caso usamos ms auto para agregar margen inicial y correrlo a la derecha-->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="#carousel">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Colaboradores</a>
+                <a class="nav-link" href="#colab">Colaboradores</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Sede</a>
+                <a class="nav-link" href="#blog">Blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Conviertete en Colaborador</a>
+                <a class="nav-link" href="#convertColaborador">Conviertete en Colaborador</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-donacion" href="#">Donaciones</a>
+                <a class="nav-link text-donacion" href="#" data-bs-toggle="modal" data-bs-target="#modalCompra">Donaciones</a>
               </li>
             </ul>
           </div>
@@ -71,7 +72,7 @@
                     <p class="d-none d-md-block fs-5">El blog acerca de la cultura guatemalteca. Tradiciones, gastronomía,  
                       historia, etc. Un lugar para compartir con el mundo sobre nuestra tierra.</p>
                       <a href="#" class="btn btn-outline-light fs-5">Quiero colaborar</a>
-                      <button type="button" class="btn btn-donar fs-5">Donar</button>
+                      <button type="button" class="btn btn-donar fs-5"  data-bs-toggle="modal" data-bs-target="#modalCompra">Donar</button>
                   </div>
                 </div>
               </div>
@@ -252,7 +253,7 @@
     <!-- /COLABORADORES -->
 
     <!-- LUGAR Y FECHA -->
-    <section id="place-time">
+    <section id="blog">
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-12 col-lg-6 ps-0 pe-0">
@@ -344,6 +345,55 @@
         </div>
     </footer>
     <!-- /FOOTER -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Donar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <form action="">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="mb-3">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="mb-3">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Apellido">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 col-md-6 offset-md-3">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Q</span>
+                    <input type="number" class="form-control" aria-label="Cantidad en quetzales">
+                    <span class="input-group-text">.00</span>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="alert alert-success" role="alert">
+              Muchas gracias por tu donación. 
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-donar">Donar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal -->
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
